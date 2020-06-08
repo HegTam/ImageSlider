@@ -20,7 +20,10 @@ function deleteSlide() {
     });
 }
 
-
+function currentSlide(n) {
+    deleteSlide();
+    displaySlide(n);
+}
 
 function nextSlide() {
     ++n;
@@ -46,4 +49,4 @@ function prevSlide() {
     }
 }
 
-// displaySlide(n);
+displaySlide(n);

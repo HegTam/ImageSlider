@@ -29,7 +29,6 @@ main #slideshow {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  padding: 10px;
 }
 
 main #slideshow .arrow {
@@ -69,7 +68,7 @@ main .gallery {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
-  padding: 5px;
+  padding: 1.2vw;
 }
 
 main .gallery img {
@@ -77,5 +76,17 @@ main .gallery img {
   margin: 5px;
   -ms-flex-preferred-size: 1;
       flex-basis: 1;
+  cursor: pointer;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+
+main .gallery img:hover {
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+  -webkit-transform: scaleX(1.1) scaleY(1.1);
+          transform: scaleX(1.1) scaleY(1.1);
+  -webkit-box-shadow: -1vw -1vw 7px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1vw -1vw 7px 0px rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=style.css.map */
