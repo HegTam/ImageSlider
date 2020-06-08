@@ -86,7 +86,7 @@ main .gallery img:hover {
   transition: 200ms ease-out;
   -webkit-transform: scaleX(1.1) scaleY(1.1);
           transform: scaleX(1.1) scaleY(1.1);
-  -webkit-box-shadow: -1vw -1vw 7px 0px rgba(0, 0, 0, 0.75);
-          box-shadow: -1vw -1vw 7px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1vw -1vw 0.8vw 0px rgba(0, 0, 0, 0.75);
+          box-shadow: -1vw -1vw 0.8vw 0px rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=style.css.map */
