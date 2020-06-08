@@ -11,10 +11,10 @@ main {
   background-color: #2b2b2b;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 80% 20%;
-      grid-template-rows: 80% 20%;
-  -ms-grid-rows: 100vw;
-      grid-template-rows: 100vw;
+  -ms-grid-rows: 80vh 20vh;
+      grid-template-rows: 80vh 20vh;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
 }
 
 main #slideshow {
@@ -26,6 +26,10 @@ main #slideshow {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  padding: 10px;
 }
 
 main #slideshow .arrow {
@@ -44,7 +48,7 @@ main #slideshow #right-arrow {
 
 main #slideshow .displayed {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   max-height: 100%;
   max-width: 100%;
 }
@@ -62,10 +66,14 @@ main .gallery {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  padding: 5px;
 }
 
 main .gallery img {
-  max-height: 80px;
+  max-height: 100%;
   margin: 5px;
   -ms-flex-preferred-size: 1;
       flex-basis: 1;

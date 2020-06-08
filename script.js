@@ -36,7 +36,6 @@ function nextSlide() {
 
 function prevSlide() {
     --n;
-    console.log(n)
     if (n < 0) {
         n = slides.length - 1;
         deleteSlide();
