@@ -9,16 +9,44 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: #2b2b2b;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80% 20%;
+      grid-template-rows: 80% 20%;
+  -ms-grid-rows: 100vw;
+      grid-template-rows: 100vw;
 }
 
-main .slideshow {
-  height: 80vh;
+main #slideshow {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
 }
 
-main .slideshow .displayed {
+main #slideshow .arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+main #slideshow #left-arrow {
+  left: 25px;
+}
+
+main #slideshow #right-arrow {
+  right: 25px;
+}
+
+main #slideshow .displayed {
   display: block;
-  height: 100%;
-  margin: auto;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 main .gallery {
@@ -31,10 +59,13 @@ main .gallery {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
 }
 
 main .gallery img {
-  min-width: 100px;
+  max-height: 80px;
   margin: 5px;
   -ms-flex-preferred-size: 1;
       flex-basis: 1;

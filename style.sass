@@ -8,23 +8,46 @@ main
     width: 100vw
     height: 100vh
     background-color: #2b2b2b
+    display: grid
+    grid-template-rows: 80% 20%
+    grid-template-rows: 100vw
 
-    .slideshow
-        height: 80vh
+    #slideshow
+        position: relative
+        display: flex
+        // height: 75vh
+        width: 100vw
+        grid-column: 1 / 2
 
-        img
+        .arrow
+            cursor: pointer
+            position: absolute
+            top: 50%
+
+        #left-arrow
+            left: 25px
+
+        #right-arrow
+            right: 25px
+
+        #left-arrow:hover, #right-arrow:hover
+            // box-shadow: 10px 10px 7px 0px rgba(0,0,0,0.75)
 
         .displayed
             display: block
-            height: 100%
-            margin: auto
+            margin: 0 auto
+            max-height: 100%
+            max-width: 100%
 
     .gallery
+        // height: 20vh
         display: flex
         justify-content: space-evenly
         align-items: center
+        grid-column: 1 / 2
 
         img
-            min-width: 100px
+            // min-width: 100px
+            max-height: 80px
             margin: 5px
             flex-basis: 1
