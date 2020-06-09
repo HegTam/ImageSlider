@@ -6,8 +6,6 @@ const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 let n = 0;
 
-imgText[0].classList.toggle("hidden");
-
 function displaySlide(n) {
     let img = document.createElement('img');
     img.setAttribute("src", slides[n].attributes.src.value);
@@ -15,7 +13,7 @@ function displaySlide(n) {
     slideShow.appendChild(img);
     imgText[n].classList.toggle("hidden");
     imgText[n].style.bottom = document.querySelector('.displayed').y + "px";
-    // console.log(document.querySelector('.displayed').y)
+    imgText[n].style.width = document.querySelector('.displayed').width + "px";
 }
 
 function deleteSlide() {
@@ -58,4 +56,16 @@ function prevSlide() {
     }
 }
 
-displaySlide(n);
+
+window.addEventListener('load', () => {
+    displaySlide(n);
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        prevSlide();
+    } else if (event.key === "ArrowRight") {
+        nextSlide();
+    }
+
+});
