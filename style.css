@@ -29,6 +29,7 @@ main #slideshow {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+  overflow: hidden;
 }
 
 main #slideshow .arrow {
@@ -50,6 +51,17 @@ main #slideshow .displayed {
   margin: auto;
   max-height: 100%;
   max-width: 100%;
+}
+
+main #slideshow p {
+  position: absolute;
+  bottom: 220px;
+  padding: 10px;
+  background-color: #00000083;
+}
+
+main #slideshow .hidden {
+  display: none;
 }
 
 main .gallery {

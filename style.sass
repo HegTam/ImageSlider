@@ -18,6 +18,7 @@ main
         width: 100vw
         grid-column: 1 / 2
         grid-row: 1 / 2
+        overflow: hidden
 
         .arrow
             cursor: pointer
@@ -38,6 +39,15 @@ main
             margin: auto
             max-height: 100%
             max-width: 100%
+
+        p
+            position: absolute
+            bottom: 220px
+            padding: 10px
+            background-color: #00000083
+
+        .hidden
+            display: none
 
     .gallery
         display: flex

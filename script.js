@@ -1,22 +1,31 @@
 let slides = document.getElementsByClassName("slides");
 const displayed = document.getElementsByClassName("displayed");
+const imgText = document.getElementsByClassName("img-text");
 const slideShow = document.getElementById("slideshow");
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 let n = 0;
 
-// console.log(slides.length);
+imgText[0].classList.toggle("hidden");
 
 function displaySlide(n) {
     let img = document.createElement('img');
     img.setAttribute("src", slides[n].attributes.src.value);
     img.classList.add("displayed");
     slideShow.appendChild(img);
+    imgText[n].classList.toggle("hidden");
+    imgText[n].style.bottom = document.querySelector('.displayed').y + "px";
+    // console.log(document.querySelector('.displayed').y)
 }
 
 function deleteSlide() {
     Array.from(displayed).forEach(element => {
         element.remove();
+    });
+    Array.from(imgText).forEach(element => {
+        if (element.classList.contains("hidden") == false) {
+           element.classList.toggle("hidden");
+        }
     });
 }
 
