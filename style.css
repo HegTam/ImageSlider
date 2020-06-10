@@ -59,7 +59,6 @@ main #slideshow .img-text {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 220px;
   padding: 3%;
   background-color: #00000083;
   color: white;

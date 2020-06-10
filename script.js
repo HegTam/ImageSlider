@@ -7,12 +7,20 @@ const rightArrow = document.getElementById("right-arrow");
 let n = 0;
 
 function displaySlide(n) {
+    displayImg();
+    displayText();
+}
+
+function displayImg() {
     let img = document.createElement('img');
     img.setAttribute("src", slides[n].attributes.src.value);
     img.classList.add("displayed");
     slideShow.appendChild(img);
-    imgText[n].classList.toggle("hidden");
-    imgText[n].style.bottom = document.querySelector('.displayed').y + "px";
+}
+
+function displayText() {
+    imgText[n].classList.remove("hidden");
+    imgText[n].style.bottom = Math.floor(document.querySelector('.displayed').y) + "px";
     imgText[n].style.width = document.querySelector('.displayed').width + "px";
 }
 
@@ -56,7 +64,6 @@ function prevSlide() {
     }
 }
 
-
 window.addEventListener('load', () => {
     displaySlide(n);
 });
@@ -67,5 +74,8 @@ document.addEventListener("keydown", (event) => {
     } else if (event.key === "ArrowRight") {
         nextSlide();
     }
+});
 
+window.addEventListener('resize', () => {
+    displayText();
 });
