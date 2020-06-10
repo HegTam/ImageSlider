@@ -30,7 +30,7 @@ function deleteSlide() {
     });
     Array.from(imgText).forEach(element => {
         if (element.classList.contains("hidden") == false) {
-           element.classList.toggle("hidden");
+           element.classList.add("hidden");
         }
     });
 }
