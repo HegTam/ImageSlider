@@ -35,7 +35,8 @@ function deleteSlide() {
     });
 }
 
-function currentSlide(n) {
+function currentSlide(image) {
+    n = image;
     deleteSlide();
     displaySlide(n);
 }
