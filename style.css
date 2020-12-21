@@ -23,7 +23,7 @@ main #slideshow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100vw;
+  /*width: 100vw;*/
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
@@ -92,6 +92,7 @@ main .gallery {
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
   padding: 1.2vw;
+  display: hidden;
 }
 
 main .gallery img {
