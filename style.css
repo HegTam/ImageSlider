@@ -7,6 +7,8 @@
 }
 
 main {
+  width: 100vw;
+  height: 100vh;
   background-color: #2b2b2b;
   display: -ms-grid;
   display: grid;
@@ -43,6 +45,10 @@ main #slideshow #left-arrow {
 
 main #slideshow #right-arrow {
   right: 25px;
+}
+
+main #slideshow #left-arrow:hover, main #slideshow #right-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 main #slideshow .displayed {
